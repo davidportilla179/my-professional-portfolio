@@ -318,15 +318,42 @@ footer > img{
 
   @media only screen and (min-width: 992px) {
     main{
-      padding: 0px 0;
-      flex-direction: row;
+      padding: 0 108px;
       align-items: center;
-      justify-content: space-evenly;
-      height: 60vh;
+      height: 80vh;
     }
 
     .data__photo > img {
       height: 450px;
     }
+
+    .aboutme {
+      padding: 40px 200px;
+    }
+  }
+
+  .project{
+    padding: 40px 128px;
+  }
+
+  .otherprojects__gallery{
+    flex-direction: row;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  footer > *{
+    padding: 10px 0;
+  }
+
+  footer > img{
+    height: 80px;
   }
 }
