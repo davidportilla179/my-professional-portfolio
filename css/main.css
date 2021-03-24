@@ -10,6 +10,7 @@ html {
   font-size: 62.5%;
   font-family: 'Oxygen', sans-serif;
   padding: 16px;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -41,7 +42,6 @@ h5{
   line-height: 39px;
 }
 
-
 p{
   font-size: 1.6rem;
   font-weight: 400;
@@ -67,14 +67,20 @@ header > img{
   height: 70px;
 }
 
-nav>ul>li {
-  display: inline-block;
-  margin: 1vh;
+nav {
+  display: none;
 }
 
-nav>ul>li>a {
+.actions>button{
+  padding: 10px 20px;
+  border-radius: 90px;
+  background-color: #FCA311;
+}
+
+.actions>button>a {
   text-decoration: none;
   color: white;
+  font-weight: 700;
 }
 
 main{
@@ -90,7 +96,6 @@ main{
 }
 
 .data__photo > img {
-  width: auto;
   height: 300px;
 }
 
@@ -101,7 +106,7 @@ main{
 
 .data__social--square{
   background-color: #FCA311;
-  padding: 1rem;
+  padding: 10px;
   border: 2px solid black;
   border-radius: 4px;
 }
@@ -227,4 +232,101 @@ footer > *{
 
 footer > img{
   height: 80px;
+}
+
+/* Tablets and Desktop*/
+
+@media (min-width: 768px){
+  header{
+    position: relative;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  header > img{
+    height: 70px;
+  }
+
+  nav{
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  nav>ul>li {
+    display: inline-block;
+    margin: 1vh;
+  }
+
+  nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    opacity: 0.5;
+  }
+
+  nav>ul>li>a:hover {
+    opacity: 1;
+  }
+
+  .actions{
+    display: none;
+  }
+
+  main{
+    padding: 40px 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 60vh;
+  }
+
+  .data__photo > img {
+    height: 350px;
+  }
+
+  .aboutme {
+    padding: 40px 40px;
+  }
+
+  .project{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px 0;
+  }
+
+  .project__image > img {
+    height: 190px;
+    padding-left: 10px;
+  }
+
+  .project__buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project__buttons > *{
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    main{
+      padding: 0px 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 60vh;
+    }
+
+    .data__photo > img {
+      height: 450px;
+    }
+  }
 }
