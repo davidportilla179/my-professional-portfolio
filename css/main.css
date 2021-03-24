@@ -315,25 +315,34 @@ footer > img{
     padding: 10px 20px;
     margin: 0 10px;
   }
+}
 
-  @media only screen and (min-width: 992px) {
-    main{
-      padding: 0 108px;
-      align-items: center;
-      height: 80vh;
-    }
+@media only screen and (min-width: 992px) {
+  main{
+    padding: 0 108px;
+    align-items: center;
+    height: 80vh;
+  }
 
-    .data__photo > img {
-      height: 450px;
-    }
+  .data__photo > img {
+    height: 450px;
+  }
 
-    .aboutme {
-      padding: 40px 200px;
-    }
+  .aboutme {
+    padding: 40px 200px;
   }
 
   .project{
     padding: 40px 128px;
+    justify-content: space-between;
+  }
+
+  .project__data {
+    padding: 40px 0;
+  }
+
+  .project__image > img {
+    height: 200px;
   }
 
   .otherprojects__gallery{
@@ -341,19 +350,7 @@ footer > img{
   }
 
   footer{
-    display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  footer > *{
-    padding: 10px 0;
-  }
-
-  footer > img{
-    height: 80px;
   }
 }
