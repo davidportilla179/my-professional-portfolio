@@ -13,9 +13,9 @@ html {
 }
 
 body{
-  background-color: #14213D;
+  /* background-color: #14213D; */
   color: white;
-  /* background: linear-gradient(135deg, #000000 0%, #14213D 100%); */
+  background: linear-gradient(135deg, #000000 0%, #14213D 100%);
 }
 
 h1{
@@ -180,4 +180,52 @@ main{
   color: #FCA311;
   padding: 4px 8px ;
   box-shadow: -4px 4px 0 white;
+  margin-bottom: 10px;
+}
+
+.otherprojects__gallery{
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+
+.otherprojects__card {
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: white;
+  color: #0F0A0A;
+  margin: 15px;
+}
+
+.otherprojects__card > *{
+  margin: 10px 0;
+}
+
+.otherprojects__card > img{
+  height: 140px;
+  border-radius: 10px;
+}
+
+.otherprojects__card--button{
+  background-color: #FCA311;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 10px 0;
+}
+
+footer{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: 40px;
+  text-align: center;
+}
+
+footer > *{
+  padding: 10px 0;
+}
+
+footer > img{
+  width: 80px;
+  height: 80px;
 }
