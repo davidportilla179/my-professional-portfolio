@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +8,8 @@
 
 html {
   font-size: 62.5%;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'Oxygen', sans-serif;
+  padding: 16px;
 }
 
 body{
@@ -17,15 +19,33 @@ body{
 }
 
 h1{
-  font-size: 5.5rem;
+  font-size: 9.5rem;
+  font-weight: 700;
 }
 
 h2{
-  font-size: 3.2rem;
+  font-size: 5.9rem;
+  font-weight: 700;
+  line-height: 95px;
 }
+
+h3{
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+h5{
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 39px;
+}
+
 
 p{
   font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 header{
@@ -56,16 +76,17 @@ main{
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  height: 100vh;
 }
 
 .data__title > *{
-  padding: 10px 0;
+  padding-top: 10px;
 }
 
 .data__photo > img {
-  width: 230px;
-  height: 230px;
+  width: auto;
+  height: 300px;
 }
 
 .data__social{
@@ -81,18 +102,13 @@ main{
 }
 
 .aboutme {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  text-align: center;
 }
 
-.flecha-down {
-  width:0px;
-  height:0px;
-  border-left:25px solid transparent; /* izquierda flecha */
-  border-right:25px solid transparent; /* derecha flecha */
-  border-top:25px solid white; /* base flecha y color*/
-  font-size:0px;
-  line-height:0px;
+.aboutme :nth-child(1){
+  font-weight: 300;
+}
+
+.aboutme :nth-child(2){
+  padding: 24px 0;
 }
