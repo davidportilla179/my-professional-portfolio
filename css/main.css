@@ -53,14 +53,17 @@ a{
   color: white;
 }
 
+button{
+  background-color: transparent;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
 header{
-  position: relative;
-  display: flex;
-  height: 80px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
+  justify-items: center;
 }
 
 header > img{
@@ -100,8 +103,10 @@ main{
 }
 
 .data__social{
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 15px;
+  text-align: center;
 }
 
 .data__social--square{
@@ -189,33 +194,50 @@ main{
 }
 
 .otherprojects__gallery{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   padding: 40px 0;
 }
 
 .otherprojects__card {
-  border: 2px solid white;
-  border-radius: 20px;
   background-color: white;
-  color: #0F0A0A;
-  margin: 15px;
+  color: black;
+  border-radius: 20px 20px;
 }
 
-.otherprojects__card > *{
-  margin: 10px 0;
+.otherprojects__card--img>img {
+  width:100%;
+  border-radius: 20px 20px 0 0;
 }
 
-.otherprojects__card > img{
-  height: 140px;
-  border-radius: 10px;
+.otherprojects__card--body {
+  text-align: start;
+  padding: 0px 20px 20px;
 }
 
-.otherprojects__card--button{
+.otherprojects__card--body>* {
+  margin-top: 20px;
+}
+
+.otherprojects__card--body>a {
+  text-align: center;
+  display: block;
   background-color: #FCA311;
-  border: 2px solid white;
+  border: 2px solid #0F0A0A;
   border-radius: 50px;
-  padding: 10px 0;
+  padding: 15px 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.letstalk > h5{
+  display: inline-block;
+  background-color: #0F0A0A;
+  color: #FCA311;
+  padding: 4px 8px ;
+  box-shadow: -4px 4px 0 white;
+  margin-bottom: 30px;
 }
 
 footer{
@@ -238,17 +260,7 @@ footer > img{
 
 @media (min-width: 768px){
   header{
-    position: relative;
-    display: flex;
-    height: 80px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-  }
-
-  header > img{
-    height: 70px;
+    grid-template-columns: 1fr 2fr 1fr;
   }
 
   nav{
@@ -315,7 +327,17 @@ footer > img{
     padding: 10px 20px;
     margin: 0 10px;
   }
+
+  .otherprojects__gallery{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .letstalk{
+    padding: 40px 40px;
+  }
 }
+
+/* DESKTOP */
 
 @media only screen and (min-width: 992px) {
   main{
@@ -345,12 +367,21 @@ footer > img{
     height: 200px;
   }
 
+  .otherprojects {
+    padding: 40px 128px;
+  }
+
   .otherprojects__gallery{
-    flex-direction: row;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .letstalk{
+    padding: 40px 200px;
   }
 
   footer{
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
   }
+
 }
