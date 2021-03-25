@@ -68,6 +68,7 @@ header{
 
 header > img{
   height: 70px;
+  justify-self: start;
 }
 
 nav {
@@ -130,15 +131,23 @@ main{
 }
 
 .project{
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 40px 0;
+  display: grid;
+  grid-template-areas:  "img"
+                        "data";
+  padding: 50px 0;
+  gap: 20px;
 }
 
 .project__data {
-  padding: 40px 0;
+  grid-area: data;
+}
+
+.project__image {
+  grid-area: img;
+}
+
+.project__image > img {
+  width: 100%;
 }
 
 .project__data > h5 {
@@ -151,10 +160,6 @@ main{
 
 .project__data > p {
   padding: 16px 0;
-}
-
-.project__image > img {
-  height: 190px;
 }
 
 .project__buttons {
@@ -307,16 +312,9 @@ footer > img{
   }
 
   .project{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 40px 0;
-  }
-
-  .project__image > img {
-    height: 190px;
-    padding-left: 10px;
+    grid-template-areas:  "data img";
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 20px;
   }
 
   .project__buttons {
@@ -326,7 +324,7 @@ footer > img{
 
   .project__buttons > *{
     padding: 10px 20px;
-    margin: 0 10px;
+    margin-right: 5px;
   }
 
   .otherprojects__gallery{
@@ -357,15 +355,18 @@ footer > img{
 
   .project{
     padding: 40px 128px;
-    justify-content: space-between;
   }
 
   .project__data {
     padding: 40px 0;
   }
 
+  .project__image {
+    justify-self: center;
+  }
+
   .project__image > img {
-    height: 200px;
+    width: 90%;
   }
 
   .otherprojects {
