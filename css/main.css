@@ -201,9 +201,13 @@ main{
 }
 
 .otherprojects__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   background-color: white;
   color: black;
   border-radius: 20px 20px;
+  padding-bottom: 20px;
 }
 
 .otherprojects__card--img>img {
@@ -211,16 +215,13 @@ main{
   border-radius: 20px 20px 0 0;
 }
 
-.otherprojects__card--body {
+.otherprojects__card--body,
+.otherprojects__card--footer {
   text-align: start;
-  padding: 0px 20px 20px;
+  padding: 0px 20px;
 }
 
-.otherprojects__card--body>* {
-  margin-top: 20px;
-}
-
-.otherprojects__card--body>a {
+.otherprojects__card--footer>a {
   text-align: center;
   display: block;
   background-color: #FCA311;
