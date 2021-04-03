@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 * {
+  border: 0;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
 }
 
 html {
-  font-size: 62.5%;
   font-family: 'Oxygen', sans-serif;
+  font-size: 62.5%;
   padding: 16px;
   scroll-behavior: smooth;
 }
 
 body{
-  /* background-color: #14213D; */
-  color: white;
   background: linear-gradient(135deg, #000000 0%, #14213D 100%);
+  color: white;
 }
 
 h1{
@@ -49,20 +48,14 @@ p{
 }
 
 a{
-  text-decoration: none;
   color: white;
-}
-
-button{
-  background-color: transparent;
-  font-size: 1.4rem;
-  font-weight: 700;
+  text-decoration: none;
 }
 
 header{
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
   justify-items: center;
 }
 
@@ -76,23 +69,23 @@ nav {
 }
 
 .actions>button{
-  padding: 10px 20px;
-  border-radius: 90px;
   background-color: #FCA311;
+  border-radius: 90px;
+  padding: 10px 20px;
 }
 
 .actions>button>a {
-  text-decoration: none;
   color: white;
   font-weight: 700;
+  text-decoration: none;
 }
 
 main{
+  align-items: center;
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
-  justify-content: flex-end;
   height: 90vh;
+  justify-content: flex-end;
 }
 
 .data__title > *{
@@ -104,23 +97,23 @@ main{
 }
 
 .data__social{
-  margin-top: 15px;
   display: grid;
-  grid-template-columns: repeat(5,1fr);
   gap: 15px;
+  grid-template-columns: repeat(5,1fr);
+  margin-top: 15px;
   text-align: center;
 }
 
-.data__social--square{
+.data__social--square > a{
   background-color: #FCA311;
-  padding: 10px;
   border: 2px solid black;
   border-radius: 4px;
+  padding: 15px;
 }
 
 .aboutme {
-  text-align: center;
   padding: 40px 0;
+  text-align: center;
 }
 
 .aboutme :nth-child(1){
@@ -133,10 +126,10 @@ main{
 
 .project{
   display: grid;
+  gap: 20px;
   grid-template-areas:  "img"
                         "data";
   padding: 50px 0;
-  gap: 20px;
 }
 
 .project__data {
@@ -152,11 +145,11 @@ main{
 }
 
 .project__data > h5 {
-  display: inline-block;
   background-color: #0F0A0A;
-  color: #FCA311;
-  padding: 4px 8px ;
   box-shadow: -4px 4px 0 white;
+  color: #FCA311;
+  display: inline-block;
+  padding: 4px 8px ;
 }
 
 .project__data > p {
@@ -170,20 +163,23 @@ main{
 
 .project__buttons > *{
   text-align: center;
-  padding: 13px 0;
   margin: 8px 0;
 }
 
-.project__buttons--transparent{
-  background-color: transparent;
+.project__buttons--transparent> a,
+.project__buttons--color> a {
   border: 2px solid white;
   border-radius: 50px;
+  display: block;
+  padding: 10px 20px;
 }
 
-.project__buttons--color{
+.project__buttons--transparent> a{
+  background-color: transparent;
+}
+
+.project__buttons--color> a{
   background-color: #FCA311;
-  border: 2px solid white;
-  border-radius: 50px;
 }
 
 .otherprojects {
@@ -191,28 +187,28 @@ main{
 }
 
 .otherprojects > h5{
-  display: inline-block;
   background-color: #0F0A0A;
-  color: #FCA311;
-  padding: 4px 8px ;
   box-shadow: -4px 4px 0 white;
+  color: #FCA311;
+  display: inline-block;
   margin-bottom: 10px;
+  padding: 4px 8px ;
 }
 
 .otherprojects__gallery{
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
+  grid-template-columns: 1fr;
   padding: 40px 0;
 }
 
 .otherprojects__card {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
   background-color: white;
-  color: black;
   border-radius: 20px 20px;
+  color: black;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
   padding-bottom: 20px;
 }
 
@@ -228,29 +224,41 @@ main{
 }
 
 .otherprojects__card--footer>a {
-  text-align: center;
-  display: block;
   background-color: #FCA311;
   border: 2px solid #0F0A0A;
   border-radius: 50px;
+  display: block;
   padding: 15px 20px;
-  font-size: 1.4rem;
-  font-weight: 700;
+  text-align: center;
+}
+
+.letstalk > *{
+  margin-bottom: 50px;
 }
 
 .letstalk > h5{
-  display: inline-block;
   background-color: #0F0A0A;
-  color: #FCA311;
-  padding: 4px 8px ;
   box-shadow: -4px 4px 0 white;
+  color: #FCA311;
+  display: inline-block;
   margin-bottom: 30px;
+  padding: 4px 8px ;
 }
 
+.letstalk > a{
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+
 footer{
+  align-items: center;
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
   margin-top: 40px;
   text-align: center;
 }
@@ -282,10 +290,10 @@ footer > img{
   }
 
   nav>ul>li>a {
-    text-decoration: none;
     color: white;
     font-size: 1.4rem;
     opacity: 0.5;
+    text-decoration: none;
   }
 
   nav>ul>li>a:hover {
@@ -297,11 +305,11 @@ footer > img{
   }
 
   main{
-    padding: 40px 0;
-    flex-direction: row;
     align-items: flex-start;
-    justify-content: space-evenly;
+    flex-direction: row;
     height: 60vh;
+    justify-content: space-evenly;
+    padding: 40px 0;
   }
 
   .data__photo > img {
@@ -324,8 +332,7 @@ footer > img{
   }
 
   .project__buttons > *{
-    padding: 10px 20px;
-    margin-right: 5px;
+    margin-right: 7px;
   }
 
   .otherprojects__gallery{
@@ -335,6 +342,10 @@ footer > img{
   .letstalk{
     padding: 40px 40px;
   }
+
+  .letstalk > a{
+    margin: 0 150px;
+  }
 }
 
 /* DESKTOP */
@@ -342,7 +353,6 @@ footer > img{
 @media only screen and (min-width: 992px) {
   main{
     padding: 60px 108px;
-    align-items: flex-start;
     height: 70vh;
   }
 
@@ -362,16 +372,12 @@ footer > img{
     padding: 40px 0;
   }
 
-  .project__image {
-    justify-self: center;
-  }
-
   .project__image > img {
     width: 90%;
   }
 
   .otherprojects {
-    padding: 40px 128px;
+    padding: 120px 128px;
   }
 
   .otherprojects__gallery{
@@ -382,9 +388,12 @@ footer > img{
     padding: 40px 200px;
   }
 
+  .letstalk > a{
+    margin: 0 100px;
+  }
+
   footer{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
   }
-
 }
